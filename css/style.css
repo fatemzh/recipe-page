@@ -1,0 +1,129 @@
+@font-face {
+  font-family: "Young Serif";
+  src: url("../assets/fonts/YoungSerif-Regular.woff2") format("woff2"), url("../assets/fonts/YoungSerif-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Outfit";
+  src: url("../assets/fonts/Outfit-Regular.woff2") format("woff2"), url("../assets/fonts/Outfit-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Outfit";
+  src: url("../assets/fonts/Outfit-SemiBold.woff2") format("woff2"), url("../assets/fonts/Outfit-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Outfit";
+  src: url("../assets/fonts/Outfit-Bold.woff2") format("woff2"), url("../assets/fonts/Outfit-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Outfit", sans-serif;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  font-size: 16px;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  background-color: hsl(0, 0%, 100%);
+  width: 100%;
+  max-width: 500px;
+  overflow: hidden;
+}
+.container section {
+  padding: 20px;
+}
+.container img {
+  width: 100%;
+  height: 12rem;
+}
+.container h1 {
+  color: black;
+  margin: 10px 0px;
+  font-size: 2.5rem;
+  font-family: "Young Serif", serif;
+  font-weight: 800;
+}
+.container h2 {
+  color: hsl(14, 45%, 36%);
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  font-family: "Young Serif", serif;
+  font-weight: 600;
+}
+.container p {
+  color: black;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.container h3 {
+  color: hsl(332, 51%, 32%);
+  font-size: 1.5rem;
+  font-family: "Young Serif", serif;
+  font-weight: 800;
+}
+.container ul {
+  padding: 20px;
+  line-height: 2;
+  list-style: circle red;
+}
+.container #prep-time {
+  background-color: hsl(330, 100%, 98%);
+  width: 90%;
+  padding: 20px;
+  border-radius: 15px;
+  margin: 10px auto;
+}
+.container #prep-time span {
+  font-weight: 600;
+  margin-left: 1.3rem;
+}
+.container #ingredients {
+  margin: 0;
+}
+
+footer {
+  width: 100%;
+}
+
+@media (min-width: 1440px) {
+  .container {
+    max-width: 50%;
+    padding: 30px 50px;
+  }
+  #header h1 {
+    font-size: 2.5rem;
+  }
+  #header h2 {
+    font-size: 1.5rem;
+  }
+  #header p {
+    font-size: 1.5rem;
+  }
+  #socials .link {
+    height: 60px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
