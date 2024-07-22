@@ -1,24 +1,24 @@
 @font-face {
   font-family: "Young Serif";
-  src: url("../assets/fonts/YoungSerif-Regular.woff2") format("woff2"), url("../assets/fonts/YoungSerif-Regular.woff") format("woff");
+  src: url("../assets/fonts/young-serif/YoungSerif-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "Outfit";
-  src: url("../assets/fonts/Outfit-Regular.woff2") format("woff2"), url("../assets/fonts/Outfit-Regular.woff") format("woff");
+  src: url("../assets/fonts/outfit/static/Outfit-Light.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "Outfit";
-  src: url("../assets/fonts/Outfit-SemiBold.woff2") format("woff2"), url("../assets/fonts/Outfit-SemiBold.woff") format("woff");
+  src: url("../assets/fonts/outfit/static/Outfit-SemiBold.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
 }
 @font-face {
   font-family: "Outfit";
-  src: url("../assets/fonts/Outfit-Bold.woff2") format("woff2"), url("../assets/fonts/Outfit-Bold.woff") format("woff");
+  src: url("../assets/fonts/outfit/static/Outfit-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
 }
@@ -31,98 +31,205 @@
   font-family: "Outfit", sans-serif;
 }
 
-html {
-  font-size: 100%;
+:root {
+  --white: hsl(0, 0%, 100%);
+  --eggshell: hsl(30, 54%, 90%);
+  --lightGrey: hsl(30, 18%, 87%);
+  --lightBrown: hsl(30, 10%, 34%);
+  --charcoal: hsl(24, 5%, 18%);
+  --brown: hsl(14, 45%, 36%);
+  --burgundy: hsl(332, 51%, 32%);
+  --lightPink: hsl(330, 100%, 98%);
+  --primary-color: var(--eggshell);
+  --primary-fontcolor: hsl(0, 0%, 20%);
+  --fontsize: 16px;
+  --font: "Outfit", sans-serif;
+  --title: "Young Serif", serif;
 }
 
 body {
-  font-family: "Outfit", sans-serif;
-  font-size: 16px;
+  font-family: var(--font);
+  font-size: var(--fontsize);
   height: 100vh;
   margin: 0;
+}
+
+h1,
+h2 {
+  font-family: var(--title);
+}
+
+main {
+  margin: 20px;
 }
 
 .container {
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
-  background-color: hsl(0, 0%, 100%);
+  background-color: var(--white);
   width: 100%;
   max-width: 500px;
   overflow: hidden;
-}
-.container section {
-  padding: 20px;
+  margin: 0 auto;
 }
 .container img {
   width: 100%;
-  height: 12rem;
+  height: auto;
 }
-.container h1 {
-  color: black;
-  margin: 10px 0px;
-  font-size: 2.5rem;
-  font-family: "Young Serif", serif;
+.container #inner-container {
+  margin: 20px;
+}
+.container #inner-container section {
+  margin: 30px 10px;
+}
+.container #inner-container h1 {
+  color: var(--charcoal);
+  font-size: 2.3rem;
   font-weight: 800;
 }
-.container h2 {
-  color: hsl(14, 45%, 36%);
-  font-size: 2.2rem;
-  margin-bottom: 20px;
-  font-family: "Young Serif", serif;
+.container #inner-container h2 {
+  color: var(--brown);
+  font-size: 2.1rem;
+  margin: 20px 0px;
   font-weight: 600;
 }
-.container p {
-  color: black;
-  font-size: 16px;
-  margin-bottom: 10px;
+.container #inner-container p {
+  color: var(--lightBrown);
+  font-weight: 600;
+  font-size: var(--fontsize);
+  line-height: 1.6;
 }
-.container h3 {
-  color: hsl(332, 51%, 32%);
+.container #inner-container h3 {
+  color: var(--burgundy);
   font-size: 1.5rem;
-  font-family: "Young Serif", serif;
   font-weight: 800;
 }
-.container ul {
+.container #inner-container ul {
   padding: 20px;
   line-height: 2;
-  list-style: circle red;
+  color: var(--lightBrown);
+  font-family: var(--font);
 }
-.container #prep-time {
-  background-color: hsl(330, 100%, 98%);
+.container #inner-container #prep-time {
+  background-color: var(--lightPink);
   width: 90%;
-  padding: 20px;
+  padding: 30px;
   border-radius: 15px;
-  margin: 10px auto;
+  margin: 0;
+  color: var(--lightBrown);
+  font-weight: 400;
 }
-.container #prep-time span {
-  font-weight: 600;
+.container #inner-container #prep-time span {
+  font-weight: 800;
   margin-left: 1.3rem;
 }
-.container #ingredients {
+.container #inner-container #prep-time ul li::marker {
+  color: var(--burgundy);
+}
+.container #inner-container #ingredients {
+  border-bottom: solid 2px lightgray;
+  width: 90%;
+}
+.container #inner-container #ingredients ul li::marker {
+  color: var(--brown);
+}
+.container #inner-container #instructions {
+  border-bottom: solid 2px lightgray;
+  width: 90%;
   margin: 0;
+}
+.container #inner-container #instructions ol {
+  margin: 20px 0px;
+  list-style-position: outside;
+  padding-left: 20px;
+  color: var(--lightBrown);
+}
+.container #inner-container #instructions ol li::marker {
+  color: var(--brown);
+}
+.container #inner-container #instructions span,
+.container #inner-container #instructions ol li::marker {
+  font-weight: 800;
+}
+.container #inner-container #instructions ol li {
+  margin-bottom: 10px;
+  line-height: 1.7;
+  font-size: var(--fontsize);
+}
+.container #inner-container #instructions span {
+  margin-left: 10px;
+}
+.container #inner-container #nutrition table {
+  margin: 10px 0;
+  border-collapse: separate;
+  border-spacing: 0 15px;
+  width: 100%;
+  background-color: white;
+}
+.container #inner-container #nutrition tr {
+  line-height: 2;
+  background-color: white;
+  position: relative;
+}
+.container #inner-container #nutrition tr th {
+  text-align: start;
+  font-weight: normal;
+  color: var(--primary-fontcolor);
+}
+.container #inner-container #nutrition tr td {
+  color: var(--brown);
+  font-weight: 800;
+}
+.container #inner-container #nutrition tr:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -7.5px;
+  height: 1px;
+  background-color: var(--lightGrey);
 }
 
 footer {
   width: 100%;
+  background-color: var(--brown);
+  color: var(--primary-color);
+  padding: 15px;
+  text-align: center;
+}
+footer a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+footer a:hover {
+  color: rgb(255, 136, 0);
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 375px) {
+  body {
+    background-color: var(--eggshell);
+  }
   .container {
+    margin: 150px auto;
+    border-radius: 30px;
+    padding: 40px;
+  }
+}
+@media (min-width: 1440px) {
+  body {
+    background-color: var(--eggshell);
+  }
+  .container {
+    margin: 150px auto;
+    border-radius: 30px;
     max-width: 50%;
-    padding: 30px 50px;
+    padding: 40px;
   }
-  #header h1 {
-    font-size: 2.5rem;
-  }
-  #header h2 {
-    font-size: 1.5rem;
-  }
-  #header p {
-    font-size: 1.5rem;
-  }
-  #socials .link {
-    height: 60px;
+  .container #img {
+    height: 300px;
+    border-radius: 15px;
   }
 }
 
